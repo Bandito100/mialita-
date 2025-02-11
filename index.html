@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Alita ❤</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #first-page {
+            background: url('snoopy.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 50px;
+            color: red;
+        }
+        h2 {
+            font-size: 30px;
+            margin-top: 20px;
+            color: #8B4513;
+        }
+        .btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .message {
+            position: absolute;
+            color: yellow;
+            font-family: 'Bodoni', serif;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        .signature {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 18px;
+            color: white;
+        }
+        #surprise {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+        }
+        #surprise img {
+            width: 90%;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="first-page">
+        <h1>TE AMO MUCHO ALITA ❤</h1>
+        <h2>MI CHIQUITA LINDA, ¿QUISIERAS SER MI SAN VALENTÍN?</h2>
+        <button class="btn" onclick="showSurprise()">SÍ</button>
+    </div>
+    <div id="surprise">
+        <img src="basbas.jpg" alt="Alita">
+        <div class="message">
+            <p>CHIWIIIII estoy muy contento de todo lo que hemos logrado juntos y me alegra que seas la persona que me impulsa a seguir mis metas y sobre todo la mujer que amo mucho.</p>
+            <p>Me encanta pasar tiempo contigo porque eres mi persona especial que me ilumina todos los días, mi alita te amo demasiado y siempre te amaré.</p>
+        </div>
+        <div class="signature">Bandito ❤</div>
+    </div>
+    <audio id="background-music" loop>
+        <source src="perfect.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+        function showSurprise() {
+            document.getElementById('first-page').style.display = 'none';
+            let surprise = document.getElementById('surprise');
+            surprise.style.display = 'block';
+            document.getElementById('background-music').play();
+        }
+    </script>
+</body>
+</html>
